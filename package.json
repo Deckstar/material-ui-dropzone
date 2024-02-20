@@ -1,12 +1,12 @@
 {
-  "name": "mui-file-dropzone",
-  "version": "4.0.2",
+  "name": "@kiocosta/mui-file-dropzone",
+  "version": "4.0.3",
   "description": "A Material-UI file-upload dropzone. Written in TypeScript.",
   "license": "MIT",
   "author": "Yuval",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Deckstar/mui-file-dropzone.git"
+    "url": "https://github.com/kiocosta/mui-file-dropzone.git"
   },
   "keywords": [
     "react",
