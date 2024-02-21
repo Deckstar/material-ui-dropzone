@@ -1,14 +1,14 @@
 # material-ui-dropzone
 
 > Material-UI-dropzone is a [React](https://github.com/facebook/react) component using [Material-UI](https://github.com/mui-org/material-ui) and is based on the excellent [react-dropzone](https://github.com/react-dropzone/react-dropzone) library.
+> 
+> ⚠️ This is a fork from [material-ui-dropzone](https://github.com/Deckstar/mui-file-dropzone) containing a more updated version of `react-dropzone`, which allows for custom validations of files.
 
 [![License](https://img.shields.io/github/license/yuvaleros/material-ui-dropzone)](https://github.com/Yuvaleros/material-ui-dropzone/File/master/LICENSE) <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->[![All Contributors](https://img.shields.io/badge/all_contributors-9-orange.svg)](#contributors)
 
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-[![Rebuild Dist Workflow Status](https://img.shields.io/github/workflow/status/yuvaleros/material-ui-dropzone/Rebuild%20Dist?label=build)](https://github.com/Yuvaleros/material-ui-dropzone/actions?query=workflow%3A%22Rebuild+Dist%22) [![Update Docs Workflow Status](https://img.shields.io/github/workflow/status/yuvaleros/material-ui-dropzone/Update%20Docs?label=docs)](https://github.com/Yuvaleros/material-ui-dropzone/actions?query=workflow%3A%22Update+Docs%22)
-
-[![npm package](https://img.shields.io/npm/v/material-ui-dropzone)](https://www.npmjs.com/package/material-ui-dropzone) [![npm downloads](https://img.shields.io/npm/dm/material-ui-dropzone.svg)](https://www.npmjs.com/package/material-ui-dropzone)
+[![npm package](https://img.shields.io/npm/v/@kiocosta/mui-file-dropzone)](https://www.npmjs.com/package/@kiocosta/mui-file-dropzone)
 
 This components provide either a file-upload dropzone or a file-upload dropzone inside of a dialog.
 
@@ -80,7 +80,12 @@ class DropzoneAreaExample extends Component {
     });
   }
   render() {
-    return <DropzoneArea onChange={this.handleChange.bind(this)} />;
+    return (
+      <DropzoneArea
+        onChange={this.handleChange.bind(this)}
+        dropzoneProps={{ validator: () => <your custom validation> }}            
+      />
+    );
   }
 }
 
